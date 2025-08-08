@@ -1,265 +1,88 @@
-body, html {
-  font-weight:normal;
-  font-family: "Segoe UI light", Segoe, sans-serif;
-  font-size:14px;
-  color:#333;
-  line-height:22px;
-  
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family:'Trebuchet MS', Arial, sans-serif;
 }
-
-html {
-  background-image: url("SmartSpend UI.png");
- background-color: #ffc7a8;
- background-repeat: no-repeat;
- background-size: cover;
- background-blend-mode: multiply;
-}
-
-h1 {
-  font-weight: bolder;
-  font-size: 85px;
-  color: #ffffff;
-  margin: 0.1em 0;
-}
-
-h2 {
-  font-weight: normal;
-  font-size: 1.5em;
-  color: #ffffff;
-  margin: 0.7em 0;
-}
-
-h3 {
-  font-weight: bolder;
-  font-size: 1.7em;
-  color: #ffffff;
-  margin: 0.3em 0;
-}
-
-h4 {
-  font-weight: normal;
-  font-size: 1.2em;
-  color: #333;
-  margin: 0.5em 0;
-}
-
 body {
     height: 100vh;
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  padding: 10px;
-   
-
+    background-color: rgb(77, 223, 231);
+    display: grid;
+    place-items: center;
+    overflow: hidden;
 }
-
-h4 {
-    font-size: 1.2em;
-    font-weight: bold;
-    margin-top: 1em;
-    margin-bottom: 0.5em;
-    color: #333;
-    
+.container {
+    width: 300px;
+    border-radius: 6px;
+    padding: 8px;
+    background-color: white;
 }
-
-.main-content {
-    font-size: 1em;
-    line-height: 1.5;
-    color: #555;
-    margin-bottom: 1em;
+#title {
     text-align: center;
+    padding: 4px 0;
+    border-bottom: 1px solid black;
 }
-
-.form-group input:focus {
-      border-color: #ce9427;
-      outline: none;
-    }
-
-button {
-       width: 190px;
-        height: 40px;
-        margin: 10px;
-    }
-
-    .main-page {
-      display: flex;
-  flex-direction: column;
-  align-items: center;
-  justify-content: space-between;
-    }
-  
-.login-container  {
-  display: flex;
-    flex-direction: column;
+#coinSticker {
+    width: 100px;
+    height: 100px;
+    display: block;
+    margin: auto;
+}
+#userValue {
+    display: block;
+    width: 100%;
+    padding: 10px 8px;
+    margin: 12px 0;
+    border-radius: 4px;
+    border: 1px solid gray;
+    outline: transparent;
+    font-family: monospace;
+}
+.selecterContainer {
+    display: flex;
+    justify-content: space-between;
     align-items: center;
-      max-width: 300px;
-  width: 100%;
-  background-color: #fff;
-  padding: 25px 30px;
-  border-radius: 5px;
-  box-shadow: 0 5px 10px rgba(0, 0, 0, 0.15);
+    padding: 4px 0;
 }
-
-#logo {
-  position: absolute;
-  top: 10px;
-  left: 20px;
-  font-size: 24px;
-  font-weight: bold;
-  color: #ffffff; 
-  z-index: 1000; 
+.selecterContainer select {
+    padding: 2px;
+    border-radius: 4px;
+    max-width:40%;
+    outline: transparent;
 }
-
-.register-container {
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  justify-content: space-between;
-  max-width: 700px;
-  width: 100%;
-  background-color: #fff;
-  padding: 25px 30px;
-  border-radius: 5px;
-  box-shadow: 0 5px 10px rgba(0, 0, 0, 0.15);
+#switchCurrency {
+    font-size: 22px;
+    border: 0;
+    outline: transparent;
 }
-
-.user-details {
-  
-  display: flex;
-  flex-wrap: wrap;
-  justify-content: space-between;
-  margin: 20px 0 12px 0;
+#status {
+    text-align: center;
+    font-size: 14px;
+    margin-top: 12px;
+    color: rgb(143, 132, 132);
+    text-transform: capitalize;
 }
-
-
-
-.login-buttons {
-  display: flex;
-  justify-content: center;
-   
-}
-
-input {
-    width: 250px;
-}
-
-form .login-container .input-box {
-  margin-bottom: 15px;
-  width: calc(100% / 2 - 20px);
-}
-
-form .user-details .input-box {
-  margin-bottom: 15px;
-  width: calc(100% / 2 - 20px);
-}
-
-form .input-box span.details {
-  display: block;
-  font-weight: 500;
-  margin-bottom: 5px;
-}
-.user-details .input-box input  {
-  height: 45px;
-  width: 100%;
-  outline: none;
-  font-size: 16px;
-  border-radius: 5px;
-  padding-left: 15px;
-  border: 1px solid #ccc;
-  border-bottom-width: 2px;
-  transition: all 0.3s ease;
-}
-
-.user-details .input-box input:focus,
-.user-details .input-box input:valid {
-  border-color: #9b59b6;
-}
-form .gender-details .gender-title {
-  font-size: 20px;
-  font-weight: 500;
-}
-form .category {
-  display: flex;
-  width: 80%;
-  margin: 14px 0;
-  justify-content: space-between;
-}
-form .category label {
-  display: flex;
-  align-items: center;
-  cursor: pointer;
-}
-form .category label .dot {
-  height: 18px;
-  width: 18px;
-  border-radius: 50%;
-  margin-right: 10px;
-  background: #d9d9d9;
-  border: 5px solid transparent;
-  transition: all 0.3s ease;
-}
-#dot-1:checked~.category label .one,
-#dot-2:checked~.category label .two,
-#dot-3:checked~.category label .three {
-  background: #9b59b6;
-  border-color: #d9d9d9;
-}
-form input[type="radio"] {
-  display: none;
-}
-form .login-container .button {
-  height: 45px;
-  margin: 35px 0
-  
-}
-form .button input {
-  height: 100%;
-  width: 100%;
-  border-radius: 5px;
-  border: none;
-  color: #fff;
-  font-size: 18px;
-  font-weight: 500;
-  letter-spacing: 1px;
-  cursor: pointer;
-  transition: all 0.3s ease;
-  background: linear-gradient(135deg, #c2651a, #812205);
-}
-form .button input:hover {
-  background: linear-gradient(-135deg, #c2651a, #812205);
-}
-/* Responsive media query code for mobile devices */
-@media(max-width: 584px) {
-  .container {
-    max-width: 100%;
-  }
-  form .user-details .input-box {
-    margin-bottom: 15px;
+#btn {
     width: 100%;
-  }
-  form .category {
+    background-color: rgb(77, 223, 231);
+    border: none;
+    border-radius: 6px;
+    padding: 12px 16px;
+    margin: 12px 0;
+    font-size: 16px;
+    font-weight: bold;
+    letter-spacing: 0.8px;
+    cursor: pointer;
+    transition: box-shadow 0.2s, transform 0.14s;
+}
+#btn:hover {
+    box-shadow: 0 0 0 2px #fff, 0 0 0 4px rgb(77, 223, 231);
+}
+#result {
     width: 100%;
-  }
-  .content form .user-details {
-    max-height: 300px;
-    overflow-y: scroll;
-  }
-  .user-details::-webkit-scrollbar {
-    width: 5px;
-  }
-}
-
-.login-redirect {
-   display: flex;
-  justify-content: center;
-  align-items: center;
-  margin-top: 20px;
-  text-align: center;
-}
-
-.title {
-    font-size: 25px;
-  font-weight: 500;
-  position: relative;
- 
+    padding: 12px 16px;
+    font-weight: 550;
+    text-align: center;
+    border-radius: 6px;
+    background-color: rgba(77, 223, 231, 0.3);
 }
